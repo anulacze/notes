@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    font-family: Lato;
+}
+
+html {
+    background: linear-gradient(90deg, rgba(231,232,232,1) 0%, rgba(255,255,255,1) 19%, rgba(255,255,255,1) 81%, rgba(231,232,232,1) 100%);
+}
+
+body {
+    width: 890px;
+    margin: 0 auto;
+    padding-top: 40px;
+    height: 100vh;
+}
+
+#background {
+    position: relative;
+}
+
+#smile {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    right: 60px;
+}
+
+#sun {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 60px;
+    right: 5px;
+}
+
+h1 {
+    font-family: 'Rock 3D';
+    font-size: 70px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 20% 20px 20%;
+}
+
+input {
+    display: block;
+    padding: 15px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    outline-color: black;
+    outline-width: 2px;
+}
+
+textarea {
+    display: block;
+    margin-top: 10px;
+    min-height: 25vh;
+    padding: 15px;
+    font-size: 1.5rem;
+    outline-color: black;
+    outline-width: 2px;
+}
+
+button {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    padding: 15px;
+}
+
+#line {
+    width: 100%;
+}
+
+#server-error {
+    display: none;
+    font-size: 2rem;
+}
+
+/*--------------GRID---------------*/
+
+#all-notes {
+    display: none;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+#note-element {
+    aspect-ratio: 1;
+    background-image: url('images/tlo.png');
+    background-size: cover;
+    position: relative;
+}
+
+#note-element-title {
+    font-weight: 700;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+#note-element-body {
+    margin-left: 20px;
+    margin-right: 30px;
+    word-break: break-word;
+}
+
+#note-remove-button {
+    position: absolute;
+    width: fit-content;
+    padding: 5px;
+    right: 25px;
+    bottom: 25px;
+    font-size: 1rem;
+}
+
+/*---------MEDIA QUERY------------*/
+
+@media screen and (max-width: 910px) {
+    body {
+        width: 590px;
+    }
+
+    #smile {
+        display: none;
+    }
+
+    #sun {
+        display: none;
+    }
+
+    #all-notes {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        width: 290px;
+    }
+
+    form {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #all-notes {
+        grid-template-columns: 1fr; 
+    }
+}
